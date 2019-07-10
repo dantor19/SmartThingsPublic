@@ -12,11 +12,11 @@ preferences {
 	section("Choose a temperature sensor(s)... (If multiple sensors are selected, the average value will be used)"){
 		input "sensors", "capability.temperatureMeasurement", title: "Sensor", multiple: true
 	}
-	section("Select the AC outlet(s)... "){
-		input "outlets", "capability.switch", title: "Outlets", multiple: true
+	section("Select the AC outlet(s) that will always be included... "){
+		input "outlets", "capability.switch", title: "Always Included Outlets", multiple: true
 	}
     section("Select the AC outlet(s) that will be excluded when a switch is turned off... "){
-		input "exclude_outlets", "capability.switch", title: "Excluded Outlets", required: false, multiple: true
+		input "exclude_outlets", "capability.switch", title: "Sometimes Excluded Outlets", required: false, multiple: true
 	}
     section("Select the switch which will cause the above outlet to be excluded... "){
 		input "exclude_switch", "capability.switch", title: "Exclude Switch", required: false, multiple: false
